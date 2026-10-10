@@ -93,3 +93,72 @@ h6 {
   line-height: 1.1;
   text-wrap: balance;
 }
+
+main > header h1 {
+  font-size: 250%;
+  margin-bottom: 0;
+}
+
+main > section > h2 {
+  font-size: 130%;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  border-bottom: 1px solid oklch(80% 3% 200);
+  padding-bottom: 0.2em;
+}
+
+article > header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+article > header h3 {
+  margin: 0;
+}
+
+article > header p {
+  margin: 0;
+}
+
+article > header p:nth-of-type(n+2) {
+  /* location / GPA lines: smaller and muted */
+  font-size: 90%;
+  color: oklch(45% 3% 200);
+}
+
+article > header p:last-child {
+  /* the dates */
+  grid-column: 2;
+  grid-row: 1;
+  text-align: right;
+  white-space: nowrap;
+}
+
+article ul {
+  margin-block: 0.5em 1.5em;
+  padding-left: 1.2em;
+}
+
+article li {
+  margin-bottom: 0.25em;
+}
+
+main > header a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+main > header a:hover {
+  text-decoration: underline;
+}
+
+@media print {
+  nav {
+    display: none;
+  }
+
+  body {
+    max-width: none;
+  }
+}
