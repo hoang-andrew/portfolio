@@ -1,6 +1,7 @@
 :root {
   --color-accent: oklch(65% 50% 0);
   accent-color: var(--color-accent);
+  color-scheme: light dark;
 }
 
 body {
@@ -11,11 +12,12 @@ body {
 }
 
 nav {
+  --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
   margin-bottom: 0.5em;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: oklch(80% 3% 200);
+  border-bottom-color: var(--border-color);
 }
 
 nav a {
@@ -29,7 +31,7 @@ nav a {
 nav a.current {
   border-bottom-width: 0.4em;
   border-bottom-style: solid;
-  border-bottom-color: oklch(80% 3% 200);
+  border-bottom-color: var(--border-color);
   padding-bottom: 0.1em;
 }
 
@@ -38,7 +40,7 @@ nav a:hover {
   border-bottom-style: solid;
   border-bottom-color: var(--color-accent);
   padding-bottom: 0.1em;
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 input,
@@ -46,6 +48,14 @@ textarea,
 button,
 select {
   font: inherit;
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  font-family: inherit;
 }
 
 form {
@@ -104,7 +114,7 @@ main > section > h2 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--color-accent);
-  border-bottom: 1px solid oklch(80% 3% 200);
+  border-bottom: 1px solid oklch(50% 10% 200 / 40%);
   padding-bottom: 0.2em;
 }
 
@@ -124,7 +134,7 @@ article > header p {
 article > header p:nth-of-type(n+2) {
   grid-column: 1 / -1;
   font-size: 90%;
-  color: oklch(45% 3% 200);
+  color: color-mix(in oklch, canvastext, canvas 40%);
 }
 
 article > header p:last-child {
