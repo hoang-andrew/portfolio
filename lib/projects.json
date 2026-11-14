@@ -14,7 +14,7 @@
     {
         "title": "Bikewatching",
         "year": 2026,
-        "image": "images/bikewatching.png",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "url": "https://hoang-andrew.github.io/Bikewatching/",
         "description": "Interactive Mapbox + D3 map of Bluebikes traffic in Boston and Cambridge. Circles are sized by trips per station and colored by departures vs. arrivals, with a time slider to filter by time of day."
     },
