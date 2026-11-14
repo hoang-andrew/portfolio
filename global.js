@@ -105,17 +105,25 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     return;
   }
 
+    const withBase = (path) =>
+    path && !path.startsWith('http') ? BASE_PATH + path : path;
+
     for (let project of projects) {
-    const article = document.createElement('article');
-    article.innerHTML = `
-      <${headingLevel}>${project.title}</${headingLevel}>
-      <img src="${project.image}" alt="${project.title}">
-      <div>
-        <p>${project.description}</p>
-        <p class="project-year">${project.year ?? ''}</p>
-      </div>
-    `;
+      const article = document.createElement('article');
+      const title = project.url
+        ? `<a href="${withBase(project.url)}">${project.title}</a>`
+        : project.title;
+
+      article.innerHTML = `
+        <${headingLevel}>${title}</${headingLevel}>
+        <img src="${withBase(project.image)}" alt="${project.title}">
+        <div>
+          <p>${project.description}</p>
+          <p class="project-year">${project.year ?? ''}</p>
+        </div>
+      `;
     containerElement.appendChild(article);
+  }
   }
 }
 

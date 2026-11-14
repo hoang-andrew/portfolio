@@ -12,10 +12,11 @@
         "description": "Team analysis of ozone pollution's impact on respiratory health across California, including asthma-related ER visits."
     },
     {
-        "title": "Project 3",
-        "year": 2021,
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "title": "Bikewatching",
+        "year": 2026,
+        "image": "images/bikewatching.png",
+        "url": "bikewatching/",
+        "description": "Interactive Mapbox + D3 map of Bluebikes traffic in Boston and Cambridge. Circles are sized by trips per station and colored by departures vs. arrivals, with a time slider to filter by time of day."
     },
     {
         "title": "Project 4",
