@@ -434,13 +434,9 @@ circle.selected {
 #scatter-plot {
   position: sticky;
   top: 0;
-  align-self: flex-start;
-  max-height: 100vh;
-  overflow-y: auto;
-}
-
-#chart svg {
-  max-height: 45vh;
+  left: 0;
+  bottom: auto;
+  height: 50vh;
 }
 
 @media print {
